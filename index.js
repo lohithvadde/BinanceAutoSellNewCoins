@@ -328,7 +328,7 @@ function refreshWidget() {
     const local_current_price = parseFloat(global_coinpairs_prices[sell_coin["coin"] + fiat_currency]);
     const local_current_value = parseFloat(parseFloat(sell_coin["quantity"]) * local_current_price).toFixed(2);
 
-    const local_change = parseFloat((local_current_value - parseFloat(global_initial_price)) * 100 / parseFloat(global_initial_price)).toFixed(2);
+    const local_change = parseFloat((local_current_price - parseFloat(global_initial_price)) * 100 / parseFloat(global_initial_price)).toFixed(2);
 
     $('#status5').html(parseFloat(global_coinpairs_prices[sell_coin["coin"] + fiat_currency]) + '$');
     $('#status1').html(local_current_value + '$');
